@@ -1,5 +1,6 @@
 ﻿using MediLabDapper.Context;
 using MediLabDapper.Repositories.DepartmentRepositories;
+using MediLabDapper.Repositories.DoctorRepositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MediLabDapper.Extensions
@@ -10,6 +11,9 @@ namespace MediLabDapper.Extensions
         {
             services.AddScoped<DapperContext>();
             services.AddScoped<IDeparatmentRepository, DepartmentRepository>();
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
+
+          
         }
     }
 }
